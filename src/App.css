@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+.reviewButtonLeft,
+.reviewButtonRight {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reviewButtonLeft {
+  left: 4%;
+}
+
+.reviewButtonRight {
+  right: 1%;
+}
+
+.caret {
+  border: 50px solid red;
+  border-top: 50px;
+  border-bottom: 0px;
+  border-left: 50px white;
+  border-right: 50px white;
+}
