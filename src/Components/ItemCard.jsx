@@ -25,7 +25,7 @@ const ItemCard = ({ data }) => {
 
     const discount = (newPrice, oldPrice) => {
         let d = Math.floor((newPrice / oldPrice) * 100)
-        return `${d}% off`;
+        return `${100 - d}% off`;
     }
 
     const formatAmount = (amount) => {

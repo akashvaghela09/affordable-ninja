@@ -5,7 +5,7 @@ const WhyUs = () => {
     const { whyUs } = data;
 
     return (
-        <div className='bg-blue-400 px-14 py-5 flex flex-col'>
+        <div className='w-10/12 bg-slate-100 px-14 py-5 my-14 flex flex-col rounded-lg drop-shadow-lg'>
             <p className='border-l-4 border-red-500 px-4 my-2 text-left text-xl'>Why Us</p>
             <div className='flex justify-between my-6 gap-6'>
                 {

@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 import { AllRoutes } from './Routes/AllRoutes';
 import { Header } from './Components/Header';
 import { Footer } from './Components/Footer';
@@ -7,6 +8,7 @@ import { CallIcon } from './Components/CallIcon';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -41,7 +43,27 @@ initializeApp(firebaseConfig);
 //   console.log(err)
 // })
 
+
+
+
 function App() {
+
+  const location = useLocation();
+  const page = location.pathname;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if(page === "/admin"){
+        return;
+      }
+
+      if(e.key === "Backspace" || e.code === "Backspace"){
+        navigate("/")
+      }
+    });
+  }, []);
+
   return (
     <div className="App bg-slate-300">
       <Header />

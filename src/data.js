@@ -6,6 +6,7 @@ import { FaMoneyBillAlt, FaRegHandPeace } from "react-icons/fa"
 import { GiPriceTag } from "react-icons/gi"
 import { MdOutlinePriceChange } from "react-icons/md"
 import { GoPackage } from "react-icons/go"
+import { info } from "autoprefixer"
 
 export const data = {
     "brandList" : [
@@ -27,42 +28,42 @@ export const data = {
     ],
     "howItWorks": [
         {
-            "tag": "Check Price",
-            "desc": "Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect  price for you.",
+            "tag": "AFFORDABLE PRICE",
+            "desc": "Compare with refurbished market price and then you will start believing our moto. We are AffordableNinja.",
             "icon": <GiPriceTag />
         },
         {
-            "tag": "Pay Amount",
-            "desc": "Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect  price for you.",
-            "icon": <FaMoneyBillAlt />
+            "tag": "Payment Mode",
+            "desc": "Confirm your order through call from AffordableNinja, we will share the UPI id. Only UPI payments accepted.",
+            "icon": <TbTruckDelivery />
         },
         {
-            "tag": "Schedule Delivery",
-            "desc": "Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect  price for you.",
-            "icon": <TbTruckDelivery />
+            "tag": "Promised Delivery",
+            "desc": "Confirm the payment process, your laptop will be scheduled for delivery at free of cost (Pan India).",
+            "icon": <FaMoneyBillAlt />
         },
     ],
     "whyUs": [
         {
-            "tag": "Best Prices",
+            "tag": "Affordable Prices",
             "desc": "Buy laptop at best market price",
             "icon": <MdOutlinePriceChange />
         },
         {
-            "tag": "Simple & Convenient",
+            "tag": "Simple & Convenient", 
             "desc": "Check price, pay amount & schedule delivery",
             "icon": <FaRegHandPeace />
         },
         {
-            "tag": "Free Doorstep Delivery",
-            "desc": "No fees for delivery across 1500 cities across india",
+            "tag": "Free Delivery with Gifts",
+            "desc": "Free delivery across 2000+ cities in india",
             "icon": <GoPackage />
         }
     ],
     "faq": [
         {
-            "question": "Why I should choose Affordable Ninja?",
-            "answer": "Our Main goal is to make people believe that they can buy laptops at affordable price and dont go for second thought, for students we will give laptop without any margin....."
+            "question": "Why I should I choose AffordableNinja?",
+            "answer": "Our Main goal is to make people believe that they can really buy laptops at affordable price and dont go for second thought, for students we will give laptop without any margin. Contact us for more info."
         },
         {
             "question": "When will I get My Laptop?",
@@ -74,31 +75,23 @@ export const data = {
         },
         {
             "question": "How to place Order?",
-            "answer": "Visit our website www.affordableninja.in select available laptops and Go for it!!!!"
-        },
-        {
-            "question": "Do I need to make pre-payment for My laptop before getting delievred to me?",
-            "answer": "Offcourse Not, but partially beacause We as a startup need some assurance from our customers to avoide false orders."
+            "answer": "Visit our website www.affordableninja.in select available laptop and make a call."
         },
         {
             "question": "What I can expect?",
-            "answer": "AffordableNinja sells refurbished laptops at affordable price, so please No warranty No gauranty.....But it worths your Money"
-        },
-        {
-            "question": "Can I return My Affordable Laptop?",
-            "answer": "Yes, only genuine reasons *within 48hrs from date of delivery along with unboxing video*"
+            "answer": "AffordableNinja sells refurbished laptops at affordable price, so please No warranty No gaurranty, But it worths affording your Money."
         },
         {
             "question": "Can I sell My Laptop with AffordableNinja?",
-            "answer": "No, not right now... AffordableNinja will comeup with Selling very soon!!!"
+            "answer": "No, not right now. AffordableNinja will come up with Selling very soon!!"
         },
         {
             "question": "How Can I contact AffordableNinja for my Enquiries?",
-            "answer": "Multiple ways....Whatsapp, call, SMS, email....... *Calls preferred"
+            "answer": "Multiple ways Whatsapp, Call, SMS, Email. Calls preferred."
         },
         {
             "question": "How to Track My orders?",
-            "answer": "Delivery partner receipt will be shared to you as per your communication mode"
+            "answer": "Delivery partner receipt will be shared to you as per your communication mode."
         },
         {
             "question": "When Can I Cancel My order?",

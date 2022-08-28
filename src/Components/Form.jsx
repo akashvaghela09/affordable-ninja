@@ -30,7 +30,7 @@ const Form = (data) => {
     const [storageType, setStorageType] = useState("");
     const [touchScreen, setTouchScreen] = useState("");
     const [chargerPrice, setChargerPrice] = useState("");
-    const [cover, setCover] = useState("");
+    const [cover, setCover] = useState("https://i.ibb.co/CJmMGtc/laptop.png");
     const [imageList, setImageList] = useState([]);
     const [videoList, setVideoList] = useState([]);
     const [visible, setVisible] = useState(true);

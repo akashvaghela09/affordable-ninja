@@ -6,7 +6,7 @@ import { BiPhoneCall } from "react-icons/bi";
 const Contact = () => {
     return (
         <div className='bg-slate-50 p-10'>
-            <p className='border-l-4 border-red-500 px-2 text-2xl font-bold mb-5 text-left'>Contact us at</p>
+            <p className='px-2 text-2xl font-bold mb-5 text-center'>Contact us at 👇</p>
             <div className='flex w-full'>
                 <div className='w-2/5 flex justify-start items-center'>
                     <img className='h-fit' src={contactImg} alt="contact"/>
@@ -23,7 +23,7 @@ const Contact = () => {
 
                     <label className='text-left m-2'>
                         <p className='text-left font-bold text-xl'>Email</p>
-                        <p className='text-left font-bold text-lg'>sarandheepa@gmail.com</p>
+                        <p className='text-left font-bold text-lg'>info@affordableninja.in</p>
                     </label>
                 </div>
             </div>

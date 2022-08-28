@@ -38,7 +38,7 @@ const ItemDetailsCard = ({ data }) => {
         console.log(newPrice)
         console.log(oldPrice)
         let d = Math.floor((newPrice / oldPrice) * 100)
-        return `${d}% off`;
+        return `${100 - d}% off`;
     }
 
     const formatAmount = (amount = 0) => {
@@ -67,7 +67,7 @@ const ItemDetailsCard = ({ data }) => {
         <div className='h-fit flex flex-col bg-slate-200'>
             <div className='flex bg-fuchsia-400 bg-gradient-to-l from-indigo-400 py-10'>
                 <div className='w-1/2 h-fit flex justify-center'>
-                    <img className='h-64 m-5' src={Laptop} alt="laptop" />
+                    <img className='h-64 m-5' src="https://i.ibb.co/CJmMGtc/laptop.png" alt="laptop" />
                 </div>
                 <div className='relative py-2 w-fit rounded-r-lg'>
                     <p className='text-4xl text-left p-4'>{company} {model} {modelNumber}</p>
@@ -99,7 +99,7 @@ const ItemDetailsCard = ({ data }) => {
                     }
                     <a href={infoUrl} target="_blank" rel="noreferrer" className='flex items-center ml-4 px-4 py-2 rounded-md my-1 border-[1px] w-fit mt-8 bg-slate-100 hover:bg-slate-200'>
                         <FiExternalLink className='' />
-                        <p className='px-4 text-left '>All Specs</p>
+                        <p className='px-4 text-left '>Know More</p>
                     </a>
                 </div>
             </div>
