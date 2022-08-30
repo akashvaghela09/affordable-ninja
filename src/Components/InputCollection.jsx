@@ -27,6 +27,7 @@ const InputCollection = (data) => {
         touchScreen,
         chargerPrice,
         cover,
+        screenSize,
 
         // for setting up state
         setCompany,
@@ -45,7 +46,8 @@ const InputCollection = (data) => {
         setStorageType,
         setTouchScreen,
         setChargerPrice,
-        setCover
+        setCover,
+        setScreenSize
     } = data;
 
     const [confirmPopup, setConfirmPopup] = useState(false)
@@ -72,13 +74,14 @@ const InputCollection = (data) => {
         setTouchScreen("")
         setChargerPrice("")
         setCover("")
+        setScreenSize("")
     }
     return (
         <div className='h-full w-full flex flex-col items-center'>
             <p className='w-full p-5 text-3xl bg-blue-300'>
                 {formType === "add" ? "Add " : "Update"} item in stock
             </p>
-            <div className='relative m-5 bg-slate-100 drop-shadow-md w-4/5 rounded-lg p-5 my-12'>
+            <div className='relative md:m-5 bg-slate-100 drop-shadow-md w-full md:w-4/5 rounded-lg p-0 md:p-5 md:my-12'>
                 {
                     formType === "update" && <MdClose className='absolute top-3 right-3 text-2xl cursor-pointer text-slate-400 hover:text-slate-900' onClick={() => closeEditMode()} />
                 }
@@ -192,6 +195,18 @@ const InputCollection = (data) => {
                 </div>
                 <div className='flex gap-5 m-4'>
                     <p className='w-1/3 text-right p-1 m-1 ml-12'>
+                        Screen Size :
+                    </p>
+                    <select value={screenSize} className='w-1/3' onChange={(e) => setScreenSize(e.target.value)}>
+                        <option value="">Select Screen Size</option>
+                        <option value="13">13 inch</option>
+                        <option value="14">14 inch</option>
+                        <option value="15">15 inch</option>
+                        <option value="16">16 inch</option>
+                    </select>
+                </div>
+                <div className='flex gap-5 m-4'>
+                    <p className='w-1/3 text-right p-1 m-1 ml-12'>
                         Backlight Keyboard :
                     </p>
                     <select value={backlight} className='w-1/3' onChange={(e) => setBacklight(e.target.value)}>
@@ -279,7 +294,7 @@ const InputCollection = (data) => {
 
             {
                 confirmPopup === true &&
-                <div className='fixed top-0 left-0 backdrop-blur-sm bg-slate-900/20 w-screen h-screen flex justify-center items-center drop-shadow-lg z-20'>
+                <div className='fixed top-0 left-0 backdrop-blur-sm bg-slate-900/20 w-screen h-screen flex justify-center items-center drop-shadow-lg z-[55]'>
                     <div className='bg-slate-100 rounded-lg w-72 h-fit'>
                         <p className='bg-slate-200 p-2 px-5 rounded-t-lg'> This Item will be added</p>
                         <p className='text-left m-1 ml-5'><b>Company :</b> {company}</p>
@@ -291,6 +306,7 @@ const InputCollection = (data) => {
                         <p className='text-left m-1 ml-5'><b>Ram Type:</b> {ramType}</p>
                         <p className='text-left m-1 ml-5'><b>Storage Size :</b> {storageSize}</p>
                         <p className='text-left m-1 ml-5'><b>Storage Type :</b> {storageType}</p>
+                        <p className='text-left m-1 ml-5'><b>Screen Size :</b> {screenSize} inch</p>
                         <p className='text-left m-1 ml-5'><b>Selling Price :</b> {price}</p>
                         <p className='text-left m-1 ml-5'><b>Actual Price :</b> {launchPrice}</p>
                         <p className='text-left m-1 ml-5'><b>Charger Price :</b> {chargerPrice}</p>

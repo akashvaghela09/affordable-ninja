@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { InputCollection } from './InputCollection';
 import { collection, addDoc, getFirestore, getDoc, doc, updateDoc } from "firebase/firestore";
 import { Spinner } from './Spinner';
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = (data) => {
     const {
@@ -31,20 +32,24 @@ const Form = (data) => {
     const [touchScreen, setTouchScreen] = useState("");
     const [chargerPrice, setChargerPrice] = useState("");
     const [cover, setCover] = useState("https://i.ibb.co/CJmMGtc/laptop.png");
-    const [imageList, setImageList] = useState([]);
-    const [videoList, setVideoList] = useState([]);
+    // const [imageList, setImageList] = useState([]);
+    // const [videoList, setVideoList] = useState([]);
     const [visible, setVisible] = useState(true);
+    const [screenSize, setScreenSize] = useState("");
 
     const handleFormSubmit = async () => {
         setLoading(true)
 
+        let newUUID = uuidv4();
+
         let itemObj = {
+            "uuid": newUUID,
             "company": company,
             "model": model,
             "modelNumber": modelNumber,
             "launchPrice": +launchPrice,
             "price": +price,
-            "cover": "",
+            "cover": cover,
             "images": [],
             "videos": [],
             "infoUrl": infoUrl,
@@ -59,11 +64,11 @@ const Form = (data) => {
                 "ramType": ramType,
                 "storage": storageSize,
                 "storageType": storageType,
+                "screenSize": screenSize,
                 "touchscreen": touchScreen === "Yes" ? true : false
             }
         }
 
-        
 
         if(type === "add"){
             const stockRef = collection(db, "stock")
@@ -71,8 +76,6 @@ const Form = (data) => {
         }
         
         if(type === "update"){
-            console.log("Inside update ...");
-            console.log(itemObj)
             const itemRef = doc(db, "stock", editId)
             await updateDoc(itemRef, itemObj)
             closeEditMode()
@@ -107,6 +110,7 @@ const Form = (data) => {
         setRamType(editItem.specs.ramType)
         setStorageSize(editItem.specs.storage)
         setStorageType(editItem.specs.storageType)
+        setScreenSize(editItem.specs.screenSize)
         setTouchScreen(editItem.specs.touchScreen === true ? "Yes" : "No")
 
         setLoading(false)
@@ -142,6 +146,7 @@ const Form = (data) => {
                 touchScreen={touchScreen}
                 chargerPrice={chargerPrice}
                 cover={cover}
+                screenSize={screenSize}
 
                 setCompany={setCompany}
                 setModel={setModel}
@@ -160,6 +165,7 @@ const Form = (data) => {
                 setTouchScreen={setTouchScreen}
                 setChargerPrice={setChargerPrice}
                 setCover={setCover}
+                setScreenSize={setScreenSize}
             />
             {
                 loading === true && <Spinner />

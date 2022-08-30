@@ -6,7 +6,7 @@ const BackButton = () => {
     const navigate = useNavigate();
 
     return (
-        <div className='fixed top-[83px] left-3 p-1 w-fit rounded-md cursor-pointer drop-shadow-md bg-slate-50 flex justify-center items-center' onClick={() => navigate(-1)}>
+        <div className='hidden fixed top-[83px] left-3 p-1 w-fit rounded-md cursor-pointer drop-shadow-md bg-slate-50 md:flex justify-center items-center' onClick={() => navigate(-1)}>
             <BiArrowBack className='mr-2' /> Go Back
         </div>
     )

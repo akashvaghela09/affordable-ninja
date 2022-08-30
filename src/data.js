@@ -56,38 +56,14 @@ export const data = {
         },
         {
             "tag": "Free Delivery with Gifts",
-            "desc": "Free delivery across 2000+ cities in india",
+            "desc": "Free delivery across 2000+ cities in India",
             "icon": <GoPackage />
         }
     ],
     "faq": [
         {
-            "question": "Why I should I choose AffordableNinja?",
-            "answer": "Our Main goal is to make people believe that they can really buy laptops at affordable price and dont go for second thought, for students we will give laptop without any margin. Contact us for more info."
-        },
-        {
-            "question": "When will I get My Laptop?",
-            "answer": "5-7 Working days, because we don't expedite things but we can deliver on promised date."
-        },
-        {
-            "question": "What is AffordableNinja, how it works?",
-            "answer": "We have started-up only with Trust in you Guys, Hoping Same Trust from you Guys Get your order unbox it and then Pay."
-        },
-        {
             "question": "How to place Order?",
             "answer": "Visit our website www.affordableninja.in select available laptop and make a call."
-        },
-        {
-            "question": "What I can expect?",
-            "answer": "AffordableNinja sells refurbished laptops at affordable price, so please No warranty No gaurranty, But it worths affording your Money."
-        },
-        {
-            "question": "Can I sell My Laptop with AffordableNinja?",
-            "answer": "No, not right now. AffordableNinja will come up with Selling very soon!!"
-        },
-        {
-            "question": "How Can I contact AffordableNinja for my Enquiries?",
-            "answer": "Multiple ways Whatsapp, Call, SMS, Email. Calls preferred."
         },
         {
             "question": "How to Track My orders?",
@@ -95,42 +71,66 @@ export const data = {
         },
         {
             "question": "When Can I Cancel My order?",
-            "answer": "Until My laptop gets packed and out for delivery, I can cancel my order."
+            "answer": "Until your laptop gets packed and out for delivery, you can cancel your order."
+        },
+        {
+            "question": "What I can expect?",
+            "answer": "AffordableNinja sells refurbished laptops at affordable price, so please No warranty No gaurranty, But it worths affording your Money."
         },
         {
             "question": "How My Laptop Looks?",
             "answer": "Product will be in refurbished condition and may have a few visible signs of earlier use."
-        }
+        },
+        {
+            "question": "When will I get My Laptop?",
+            "answer": "5-7 Working days, because we don't expedite things but we can deliver on promised date."
+        },
+        {
+            "question": "What is AffordableNinja, how it works?",
+            "answer": "We have started-up only with Trust in you Guys, Hoping Same Trust from you Guys. Select laptop model and contact us."
+        },
+        {
+            "question": "Why I should I choose AffordableNinja?",
+            "answer": "Our Main goal is to make people believe that they can really buy laptops at affordable price and dont go for second thought, for students we will give laptop without any margin. Contact us for more info."
+        },
+        {
+            "question": "How Can I contact AffordableNinja for my Enquiries?",
+            "answer": "Multiple ways Whatsapp, Call, SMS, Email. Calls preferred."
+        },
+        {
+            "question": "Can I sell My Laptop with AffordableNinja?",
+            "answer": "No, not right now. AffordableNinja will come up with Selling very soon!!"
+        },
     ],
     "reviews": [
         {
-            "name": "Saranraj",
+            "name": "Rajeev",
             "city": "Bangalore",
             "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
         },
         {
-            "name": "John Cena",
-            "city": "Goa",
+            "name": "Pradeep",
+            "city": "Bangalore",
             "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
         },
         {
-            "name": "Osama",
-            "city": "Patna",
-            "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
-        },
-        {
-            "name": "MS Dhoni",
-            "city": "Jammu",
-            "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
-        },
-        {
-            "name": "Ronaldo",
-            "city": "Surat",
-            "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
-        },
-        {
-            "name": "Shakti Kapoor",
+            "name": "Madhav",
             "city": "Delhi",
+            "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
+        },
+        {
+            "name": "Shubham",
+            "city": "Pune",
+            "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
+        },
+        {
+            "name": "Arun",
+            "city": "Delhi",
+            "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
+        },
+        {
+            "name": "Bikram",
+            "city": "Chennai",
             "desc": "I must say that i am really impressed with the very good effort by affordable ninja. keep going."
         },
 

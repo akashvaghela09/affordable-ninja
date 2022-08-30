@@ -11,11 +11,13 @@
     "react-icons": "^4.4.0",
     "react-image-lightbox": "^5.1.4",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "uuid": "^8.3.2",
+    "vercel": "^28.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI='' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

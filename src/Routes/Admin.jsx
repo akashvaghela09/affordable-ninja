@@ -43,7 +43,16 @@ const Admin = () => {
         const userRef = collection(db, "users")
 
         let snapshot = await getDocs(userRef)
-        let admin = snapshot.docs[0].data()
+        let admin = {}
+        
+        snapshot.forEach((doc) => {
+            let tempUser = doc.data();
+
+            if(savedUsername === tempUser.username){
+                admin = tempUser;
+                return;
+            }
+        })
 
         if (savedUsername === admin.username && savedPassword === admin.password) {
             setAuth(true)
@@ -52,6 +61,8 @@ const Admin = () => {
             setLoading(false)
             alert("Login Attempt Failed !!")
         }
+
+        console.log(auth);
     }
 
     const handleKeyPress = (event) => {
@@ -67,7 +78,15 @@ const Admin = () => {
         const userRef = collection(db, "users")
 
         let snapshot = await getDocs(userRef)
-        let admin = snapshot.docs[0].data()
+        let admin = {}
+        
+        snapshot.forEach((doc) => {
+            let tempUser = doc.data();
+
+            if(username === tempUser.username){
+                admin = tempUser;
+            }
+        })
 
         if (username === admin.username && password === admin.password) {
             setAuth(true)
@@ -76,6 +95,7 @@ const Admin = () => {
             setLoading(false)
         } else {
             setLoading(false)
+            clearData()
             alert("Login Attempt Failed !!")
         }
     }
@@ -92,10 +112,10 @@ const Admin = () => {
     }, []);
 
     return (
-        <>
+        <div>
             {auth === true ?
                 <div className='min-h-screen h-fit flex'>
-                    <div className='w-1/5 bg-blue-400'>
+                    <div className='hidden md:block w-1/5 bg-blue-400'>
                         <div className='sticky top-20 left-0'>
                             <label
                                 className='flex items-center m-2 drop-shadow-md rounded-md bg-slate-200 hover:bg-slate-300 cursor-pointer'
@@ -145,8 +165,8 @@ const Admin = () => {
                 </div>
                 :
                 <div className='min-h-screen h-fit flex justify-center items-center'>
-                    <div className='bg-slate-200 rounded-lg w-1/2 h-96 flex flex-col items-center justify-center'>
-                        <div className='w-1/2 mb-8'>
+                    <div className='bg-slate-200 rounded-lg w-11/12 md:w-1/2 h-96 flex flex-col items-center justify-center'>
+                        <div className='w-11/12 md:w-1/2 mb-8'>
                             <p className='text-3xl text-left'>Username</p>
                             <input
                                 className='w-full text-2xl p-2'
@@ -154,7 +174,7 @@ const Admin = () => {
                                 onChange={(e) => setUsername(e.target.value)}
                             />
                         </div>
-                        <div className='w-1/2 mb-8'>
+                        <div className='w-11/12 md:w-1/2 mb-8'>
                             <p className='text-3xl text-left'>Password</p>
                             <input
                                 className='w-full text-2xl p-2'
@@ -171,9 +191,9 @@ const Admin = () => {
             }
 
             {
-                auth === true && <p onClick={() => handleLogout()} className='absolute top-3 right-10 text-lg font-bold z-20 cursor-pointer hover:bg-slate-300 p-2 px-4 rounded-lg'>Logout</p>
+                auth === true && <p onClick={() => handleLogout()} className='absolute top-3 right-10 text-lg font-bold z-[50] cursor-pointer hover:bg-slate-300 p-2 px-4 rounded-lg'>Logout</p>
             }
-        </>
+        </div>
     )
 }
 

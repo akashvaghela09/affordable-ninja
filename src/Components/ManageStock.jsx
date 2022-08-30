@@ -33,6 +33,11 @@ const ManageStock = () => {
 
     const updateUnitCount = (id, total, arg) => {
         setLoading(true)
+
+        if(arg <= 0){
+            setLoading(false)
+            return;
+        }
         const itemRef = doc(db, "stock", id)
 
         updateDoc(itemRef, { total: total + arg })

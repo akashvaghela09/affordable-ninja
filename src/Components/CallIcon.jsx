@@ -10,7 +10,7 @@ const CallIcon = () => {
     }
 
     return (
-        <div onClick={() => handleNavigate()} className='fixed bottom-6 right-10 bg-blue-500 w-16 h-16 z-20 flex justify-center items-center rounded-full cursor-pointer drop-shadow-lg'>
+        <div onClick={() => handleNavigate()} className='fixed bottom-4 md:bottom-6 right-4 md:right-10 bg-blue-500 w-16 h-16 z-20 flex justify-center items-center rounded-full cursor-pointer drop-shadow-lg'>
             <FiPhoneCall className='text-3xl text-slate-50'/>
         </div>
     )

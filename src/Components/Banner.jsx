@@ -13,9 +13,9 @@ const Banner = () => {
 
     const SiteInfo = () => {
         return (
-            <div className='w-1/2 p-14 absolute top-0 left-0 z-10'>
-                <p className='text-4xl font-bold text-justify'>Buy your next Laptop at <br />affordable price</p>
-                <div className="flex my-6 gap-4">
+            <div className='w:full md:w-1/2 pb-12 md:pb-0 p-5 md:p-14 md:absolute top-0 left-0 z-10 bg-slate-100 md:bg-transparent'>
+                <p className='text-xl md:text-4xl font-bold text-justify'>Buy your next Laptop at <br />affordable price</p>
+                <div className="flex flex-col md:flex-row my-4 md:my-6 gap-2 md:gap-4">
                     <label className='flex  items-center'>
                         <TiTick className='text-blue-700 text-2xl' />
                         Maximum Value
@@ -29,12 +29,12 @@ const Banner = () => {
                         Free Doorstep Delivery
                     </label>
                 </div>
-                <div className='flex justify-start items-center my-3'>
+                <div className='flex justify-center md:justify-start items-center my-3'>
                     <div className='w-20 h-[2px] bg-slate-800' />
                     <p className='p-2 mx-3 w-fit '>Choose a Brand</p>
                     <div className='w-20 h-[2px] bg-slate-800' />
                 </div>
-                <div className='flex justify-start gap-6'>
+                <div className='flex justify-evenly md:justify-start md:gap-6'>
                     {
                         brandList.length > 0 &&
                         brandList.map((el, index) => {
@@ -67,13 +67,13 @@ const Banner = () => {
     }, []);
 
     return (
-        <div className='w-full relative flex h-[500px]'>
+        <div className='w-full relative flex flex-col md:flex-row h-fit md:h-[500px]'>
                 <SiteInfo />
                 {
                     posterIndex === 1 &&
                     <Fade className='w-full'>
                         <div className='bg-gradient-to-l from-indigo-500 w-full h-full flex justify-end'>
-                            <div className="w-1/2 h-4/5 flex justify-center items-start">
+                            <div className="w-full md:w-1/2 h-full md:h-4/5 flex justify-center items-center">
                                 <PosterOne />
                             </div>
                         </div>
@@ -83,7 +83,7 @@ const Banner = () => {
                     posterIndex === 2 &&
                     <Fade className='w-full'>
                         <div className='bg-gradient-to-l from-slate-500 w-full h-full flex justify-end'>
-                            <div className="w-1/2 h-4/5 flex justify-center items-start">
+                            <div className="w-full md:w-1/2 h-full md:h-4/5 flex justify-center items-center">
                                 <PosterTwo />
                             </div>
                         </div>

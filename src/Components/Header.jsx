@@ -6,7 +6,7 @@ import Logo from "../Assets/logo.png"
 const Header = () => {
     let location = useLocation();
     let page = location.pathname
-    console.log(page);
+
     return (
         <div className='bg-slate-100 p-2 drop-shadow flex justify-start sticky top-0 left-0 z-50'>
             <Link to="/" className='p-2 text-2xl font-bold flex items-center'>
